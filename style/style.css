@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    height: 100px;
+    padding: 0 40px;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    width: 100%;
+}
+
+.left-header {
+    margin-right: auto;
+}
+
+.left-header p {
+    font-size: 1.25rem;
+    margin-top: 15px;
+}
+
+.middle-header h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 3px crimson;
+}
+
+.right-header {
+    margin-left: auto;
+}
+
+.shopping-cart {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.main {
+    flex-grow: 1;
+    /* background-color: aqua; */
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.main-left {
+    height: 100%;
+    /* background-color: brown; */
+    width: 30%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 70px;
+}
+
+.main-left-search {
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.input-group .btn {
+    width: 50px;
+}
+
+#select {
+    /* background-color: aqua; */
+    width: fit-content;
+    height: 100%;
+}
+
+.main-left-filter {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .1);
+    margin-bottom: 100px;
+}
+
+.main-left-filter h3 {
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.main-left-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 35%;
+}
+
+.main-right {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    overflow: auto;
+    max-height: calc(90vh - 100px);
+    padding: 20px;;
+}
+
+.card {
+    width: 250px;
+    max-height: 440px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 220px;
+}
+
+.card-title, .card-text {
+    margin-bottom: 5px !important;
+}
+
+.card-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-btn .btn {
+    width: 50%;
+}
+
+.card-btn .btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* FOOTER STYLE START */
+.footer {
+    display: flex;
+    justify-content: center;
+}
+/* FOOTER STYLE END */
