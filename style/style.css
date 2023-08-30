@@ -52,6 +52,7 @@
     padding: 20px;
     display: flex;
     gap: 30px;
+    height: 100%;
 }
 
 .main-left {
@@ -132,22 +133,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     overflow: auto;
-    max-height: calc(90vh - 75px);
     padding: 20px;
     padding-top: 40px;
+    max-height: calc(90vh - 65px);
 }
 
 .card {
     width: 250px;
-    max-height: 440px;
+    height: 440px !important;
     overflow: hidden;
 }
 
-.card-img-top {
+.card .card-img-top {
     height: 220px;
     cursor: pointer;
+}
+
+.card-body {
+    display: grid;
+    grid-template-rows: auto 45px;
 }
 
 .card-title, .card-text {
@@ -162,6 +169,7 @@
 
 .card-btn .btn {
     width: 50%;
+    height: 45px;
 }
 
 .card-btn .btn a {

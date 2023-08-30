@@ -47,8 +47,8 @@
         </div>
         <div class="main-left-sort">
             <h3>Sort By</h3>
-            <select class="form-select form-select-sm select" id="select">
-              <option selected>--Sort By--</option>
+            <select class="form-select form-select-sm select" id="select2">
+              <option value="">--Sort By--</option>
               <option value="price">Price</option>
               <option value="role">Role</option>
               <option value="stock">Stock</option>
@@ -61,19 +61,7 @@
         </div>
       </div>   
       <div class="card-container">
-        <div class="card" id="card">
-          <img src="./images/3_-_Spiderman.png" id="card-img" class="card-img-top" alt="...">
-          <div class="card-body">
-              <h5 class="card-title">Spiderman Miles Morales</h5>
-              <p class="card-text">Genre : Action</p>
-              <p class="card-text">Harga : Rp. 1.000.000</p>
-              <p class="card-text">stock : 20</p>
-              <div class="card-btn">
-                <button type="button" class="btn btn-primary"><a href="#">Buy</a></button>
-                <button type="button" class="btn btn-primary"><a href="#">Add cart</a></button>
-              </div>
-          </div>
-        </div>
+        
       </div>
     </main>
     <footer class="footer">
@@ -92,7 +80,7 @@
               <div class="modal-info">
                   <p>Title : <span id="title"></span></p>
                   <p>Publisher : <span id="publisher"></span></p>
-                  <p>Role : <span id="role"></span></p>
+                  <p>Role : <span id="modal-role"></span></p>
                   <p>Release Date : <span id="release-date"></span></p>
                   <p>Description : <span id="description"></span></p>
               </div>
@@ -126,6 +114,5 @@
   <script>feather.replace();</script>
   <script src="./scripts/data.js"></script>
   <script src="./scripts/index.js"></script>
-  <script src="./scripts/testing.js"></script>
 </body>
 </html>
