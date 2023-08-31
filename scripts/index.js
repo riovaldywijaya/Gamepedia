@@ -1,4 +1,6 @@
 let cartItems = [];
+let requestList = JSON.parse(localStorage.getItem('request-game')) || [];
+
 // Function untuk mempopup modal game detail dengan mengklik gambar gamenya
 function toggleGameModal(data) {
 	let cardImages = document.getElementsByClassName("card-img-top");
@@ -371,16 +373,38 @@ closeRequestModalBtn.addEventListener("click", function () {
 // Submit request handler
 submitRequestBtn.addEventListener("click", function () {
 	let requestInput = document.getElementById("request");
-	let isDuplicate = checkDuplicateRequest(requestList, requestInput.value);
+    let requestGame = {
+        title: requestInput.value,
+        count: 0
+    }
 
 	if (!requestInput.value) {
 		alert("Masukan nama game");
 		return;
-	} else if (isDuplicate) {
-		alert("Request telah pernah dibuat");
-	} else {
-		requestList.push(requestInput.value);
+	} else  {
+        if(requestList.length === 0) {
+            requestGame['count'] = 1;
+            requestList.unshift(requestGame);
+        } else {
+            // console.log('tambah');
+            let duplicate = false;
+
+            for(let game of requestList) {
+                if(game['title'] === requestInput.value) {
+                    game['count']++;
+                    duplicate = true;
+                    break;
+                }
+            }
+
+            if(!duplicate) {
+                requestGame['count'] = 1;
+                requestList.unshift(requestGame);
+            }
+        }
 	}
+    
+    localStorage.setItem('request-game', JSON.stringify(requestList));
 
 	toggleModal(requestModal);
 });
