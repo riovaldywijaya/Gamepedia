@@ -273,8 +273,8 @@ function render(array) {
             <div class="card-info">
                 <h5 class="card-title">${array[i].name}</h5>
                 <p class="card-text">Genre : ${array[i].role}</p>
-                <p class="card-text">Harga : ${array[i].price}</p>
-                <p class="card-text">stock : ${array[i].stock}</p>
+                <p class="card-text">Price : ${array[i].price}</p>
+                <p class="card-text">Stock : ${array[i].stock}</p>
             </div>
             <div id="card-btn" class="card-btn">
                 <button type="button" class="btn btn-primary buy" name="${array[i].name}"><a href="./cart.html">Buy</a></button>
@@ -338,7 +338,7 @@ resetBtn.addEventListener('click', function () {
 
     searchText.value = '';
 
-    searchGame(gamesData);
+    render(gamesData);
 })
 
 
@@ -379,7 +379,7 @@ submitRequestBtn.addEventListener("click", function () {
     }
 
 	if (!requestInput.value) {
-		alert("Masukan nama game");
+		alert("Please insert the title of the game");
 		return;
 	} else  {
         if(requestList.length === 0) {
