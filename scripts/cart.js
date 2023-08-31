@@ -46,7 +46,7 @@ function renderCart(array) {
 
     let ringkasanPembelian = document.getElementsByClassName('flex-tween')[0];
     let totalBarang = ringkasanPembelian.querySelectorAll('div')[0];
-    totalBarang.innerHTML = `(${temp} Barang)`;
+    totalBarang.innerHTML = `(${temp} Items)`;
     //   TOTAL BARANG => END
   
     //   TOTAL HARGA => START
@@ -141,11 +141,10 @@ let containerModal = document.getElementsByClassName("modal")[0];
 
 pembelianButton.addEventListener("click", function () {
     if(cartGames.length === 0) {
-        alert('Masukkan game kedalam keranjang terlebih dahulu');
+        alert('Please insert the game first!');
     } else {
         containerModal.style.display = "block";
     }
-    // console.log(cartGames);
 });
 
 // ! CLICK CLOSE BUTTON MODAL
