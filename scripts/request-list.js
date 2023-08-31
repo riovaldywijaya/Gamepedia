@@ -1,4 +1,4 @@
-let requestGame = JSON.parse(localStorage.getItem('request-game'));
+let requestGame = JSON.parse(localStorage.getItem('request-game')) || [];
 let requestBody = document.getElementById('request-body');
 
 for(let i = 0; i < requestGame.length - 1; i++) {
