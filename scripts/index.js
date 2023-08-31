@@ -308,6 +308,8 @@ if (username) {
 	user.innerText = name;
 }
 
+// fsdfasdfa
+
 // Close game modal
 let modal = document.getElementById("my-modal");
 let closeModalBtn = document.getElementById("close-modal-btn");
