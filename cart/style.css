@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+  }
+  
+  .container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    display: flex;
+    height: 100px;
+    padding: 0 40px;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    width: 100%;
+  }
+  
+  .left-header {
+    margin-right: auto;
+  }
+  
+  .left-header p {
+    font-size: 1.25rem;
+    margin-top: 15px;
+  }
+  
+  .middle-header h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 3px crimson;
+  }
+  
+  .right-header {
+    margin-left: auto;
+  }
+  
+  .btn-close {
+    cursor: pointer;
+  }
+  
+  .main {
+    flex-grow: 1;
+    /* background-color: aqua; */
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .input-group .btn {
+    width: 50px;
+  }
+  
+  #select {
+    /* background-color: aqua; */
+    width: fit-content;
+    height: 100%;
+  }
+  
+  .btn {
+    width: 35%;
+  }
+  
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    overflow: auto;
+    max-height: calc(90vh - 100px);
+    padding: 20px;;
+  }
+  
+  .card {
+    width: 250px;
+    max-height: 440px;
+    overflow: hidden;
+  }
+
+  .table-wrapper {
+    max-height: 400px;
+    overflow: auto;
+    width: 100%;
+    display:inline-block;
+  }
+  .table-earnings {
+    background: #F3F5F6;
+  }
+  
+  .font-size-minimal{
+    font-size: 12px;
+  }
+  
+
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+.container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-container {
+  max-width: 90vw;
+  min-width: 90vw;
+  max-height: 100vh;
+  min-height: 100vh;
+  /* background: salmon; */
+  display: flex;
+  gap: 1em;
+}
+
+.content-left {
+  width: 70%;
+  height: 100%;
+  /* background: red; */
+  /* padding: 1em; */
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(0,0,0,0.3);
+  margin: 1em 0;
+}
+/* .custom-input-q {
+  width: 100px;
+  height: 50px;
+} */
+.content-right {
+  width: 30%;
+  /* background: lime; */
+  height: 50vh;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.flex-tween {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.r-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 23vh;
+  justify-content: space-between;
+}
+.custom-btn {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  outline: none;
+  background: #076ff7;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background:#0c5ec9;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.flex-tween-center {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* background: brown; */
+}
+.wrap-1 {
+  padding: 1em;
+  /* background: green; */
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.wrap-2 {
+  margin-top: 3em;
+  margin-bottom: 5em;
+  padding: 1em;
+  /* background: yellow; */
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.flex-tween-center input {
+  width: 27em;
+  font-size: 14px;
+  height: 40px;
+  padding: .5em;
+}
+.flex-tween-center label {
+  margin-top: 1em;
+  font-size: 14px;
+}
+.flex-tween-center textarea {
+  width: 27em;
+  font-size: 14px;
+  height: 100px;
+  padding: .5em;
+}
+.custom-quantity {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
