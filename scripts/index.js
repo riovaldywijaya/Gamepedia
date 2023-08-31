@@ -1,3 +1,4 @@
+let cartItems = [];
 // Function untuk mempopup modal game detail dengan mengklik gambar gamenya
 function toggleGameModal(data) {
 	let cardImages = document.getElementsByClassName("card-img-top");
@@ -127,7 +128,37 @@ function addGame(cartItem, game) {
 }
 
 // Function handler card btn
-function handlerCardButton() {}
+function handlerCardButton(gamesData) {
+    let buyButtons = document.getElementsByClassName("buy");
+    let addButtons = document.getElementsByClassName("add");
+
+    for (let addBtn of addButtons) {
+        addBtn.addEventListener("click", function (e) {
+            let name = addBtn.getAttribute("name");
+
+            for (let game of gamesData) {
+                if (name === game["name"]) {
+                    addGame(cartItems, game);
+                    break;
+                }
+            }
+        });
+    }
+
+    for (let buyBtn of buyButtons) {
+        buyBtn.addEventListener("click", function (e) {
+            let name = buyBtn.getAttribute("name");
+
+            for (let game of gamesData) {
+                if (name === game["name"]) {
+                    addGame(cartItems, game);
+                    break;
+                }
+            }
+        });
+    }
+}
+
 
 // ! SORTING BERDASARKAN TITLE / PRICE / ROLE / STOCK
 let sorting = function (data, sortBy) {
@@ -252,6 +283,7 @@ function render(array) {
 	}
 
 	toggleGameModal(array);
+    handlerCardButton(array);
 }
 
 render(gamesData);
