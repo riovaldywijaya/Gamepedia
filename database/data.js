@@ -116,5 +116,3 @@ let gamesData = [
         stock: 50,
     },
 ];
-
-let requestList = [];
