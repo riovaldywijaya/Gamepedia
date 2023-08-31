@@ -118,3 +118,4 @@ let gamesData = [
 ];
 
 let requestList = [];
+let cartItems = [];
