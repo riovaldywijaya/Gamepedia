@@ -1,4 +1,4 @@
-let cartItems = [];
+let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 let requestList = JSON.parse(localStorage.getItem('request-game')) || [];
 
 // Function untuk mempopup modal game detail dengan mengklik gambar gamenya

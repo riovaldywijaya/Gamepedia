@@ -84,7 +84,7 @@ function renderCart(array) {
             let tombolEdit = document.getElementsByClassName('btn-success').item(i);
     
             tombolEdit.onclick = function (e) {
-            let editByUser = prompt('Masukan jumlah yang ingin anda beli');
+            let editByUser = prompt('please insert the quantity');
             editQuantity(cartGames, this.name, editByUser);
             };
         }
@@ -118,6 +118,7 @@ let deleteObject = function (data, value) {
 	for (let i = 0; i < data.length; i++) {
 		if (data[i].name === value) {
 			data.splice(i, 1);
+            localStorage.setItem('cart', JSON.stringify(data));
 			break;
 		}
 	}
@@ -128,7 +129,9 @@ let deleteObject = function (data, value) {
 let editQuantity = function (data, value, user) {
     for (let i = 0; i < data.length; i++) {
         if (data[i].name === value) {
-            data[i].qty = user;
+            if(user) {
+                data[i].qty = user;
+            }
         }
     }
 
