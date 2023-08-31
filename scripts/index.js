@@ -33,7 +33,7 @@ function searchGame(gamesData) {
 	let filter = document.getElementById("select").value;
 	let hasilSearch = [];
 
-	if (filter === "genre") {
+	if (filter === "role") {
 		for (let game of gamesData) {
 			let roles = game.role;
 
@@ -43,7 +43,7 @@ function searchGame(gamesData) {
 				}
 			}
 		}
-	} else if (filter === "role") {
+	} else if (filter === "title") {
 		for (let i = 0; i < gamesData.length; i++) {
 			let namaGame = gamesData[i].name;
 
@@ -55,7 +55,7 @@ function searchGame(gamesData) {
 		hasilSearch = gamesData;
 	}
 
-	document.getElementsByClassName("form-control")[0].value = "";
+	// document.getElementsByClassName("form-control")[0].value = "";
 
 	render(hasilSearch);
 
@@ -308,7 +308,11 @@ if (username) {
 	user.innerText = name;
 }
 
-// fsdfasdfa
+// Function Go To Cart 
+let shoppingCart = document.getElementById('shopping-cart');
+shoppingCart.addEventListener('click', function () {
+    window.location.href = './cart.html';
+});
 
 // Close game modal
 let modal = document.getElementById("my-modal");
@@ -324,6 +328,18 @@ tombolSearch.onclick = function () {
 	searchGame(gamesData);
 };
 
+
+// Reset Search
+let resetBtn = document.getElementById('reset-btn');
+resetBtn.addEventListener('click', function () {
+    let searchText = document.getElementsByClassName("form-control")[0];
+
+    searchText.value = '';
+
+    searchGame(gamesData);
+})
+
+
 // Sorting Game
 let selectSort = document.getElementById("select2");
 selectSort.addEventListener("change", function () {
@@ -335,10 +351,6 @@ selectSort.addEventListener("change", function () {
 	}
 });
 
-let filterRadio = document.getElementById("role");
-filterRadio.addEventListener("change", function (e) {
-	sorting(gamesData, this.value);
-});
 
 let divCardBtn = document.getElementById("card-btn");
 
