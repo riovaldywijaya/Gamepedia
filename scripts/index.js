@@ -384,3 +384,9 @@ submitRequestBtn.addEventListener("click", function () {
 
 	toggleModal(requestModal);
 });
+
+let requestListBtn = document.getElementById('request-list-btn');
+requestListBtn.addEventListener('click', function() {
+    window.location.href = './request-list.html';
+});
+

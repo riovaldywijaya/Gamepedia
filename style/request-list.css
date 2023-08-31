@@ -1,0 +1,14 @@
+.modal {
+    display: block;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 40px;
+    font-weight: bold;
+}
