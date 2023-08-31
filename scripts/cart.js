@@ -63,15 +63,18 @@ function renderCart(array) {
 	totalBayar.innerHTML = totalHargaString;
 	//   TOTAL HARGA 2 => END
 
-	for (let i = 0; i < cartGames.length; i++) {
-		let tombolDelete = document
-			.getElementsByClassName("btn-danger")
-			.item(i);
 
-		tombolDelete.onclick = function (e) {
-			deleteObject(cartGames, this.name);
-		};
-	}
+    if(array.length !== 0) {
+        for (let i = 0; i < cartGames.length; i++) {
+            let tombolDelete = document
+                .getElementsByClassName("btn-danger")
+                .item(i);
+    
+            tombolDelete.onclick = function (e) {
+                deleteObject(cartGames, this.name);
+            };
+        }
+    }
 }
 
 renderCart(cartGames);
@@ -113,19 +116,20 @@ let pembelianButton = document.getElementsByClassName("custom-btn")[0];
 let containerModal = document.getElementsByClassName("modal")[0];
 
 pembelianButton.addEventListener("click", function () {
-    if(gamesData2.length === 0) {
+    if(cartGames.length === 0) {
         alert('Masukkan game kedalam keranjang terlebih dahulu');
     } else {
         containerModal.style.display = "block";
     }
+    console.log(cartGames);
 });
 
 // ! CLICK CLOSE BUTTON MODAL
 let a = (document.querySelector(".modal-footer .btn").onclick = () => {
 	containerModal.style.display = "none";
 
-	gamesData2 = [];
-	renderCart(gamesData2);
+	cartGames = [];
+	renderCart(cartGames);
 });
 
 
