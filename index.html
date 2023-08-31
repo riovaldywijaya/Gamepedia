@@ -18,7 +18,7 @@
             <h1>Game Store</h1>
         </div>
         <div class="right-header">
-            <i data-feather="shopping-cart" class="shopping-cart"></i>
+            <i data-feather="shopping-cart" class="shopping-cart" id="shopping-cart"></i>
         </div>
     </header>
     <main class="main">
@@ -33,17 +33,9 @@
             <input type="text" class="form-control" placeholder="Search Text">
             <button class="btn btn-outline-secondary" type="button" id="search-btn"><i data-feather="search"></i></button>
           </div>
-        </div>
-        <div class="main-left-filter">
-            <h3>Filter By</h3>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="role" id="all" value="all">
-                <label class="form-check-label" for="all">All</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="role" id="role" value="role">
-                <label class="form-check-label" for="role">Role</label>
-            </div>
+          <div class="reset-btn-container">
+            <button type="button" id="reset-btn" class="btn btn-secondary">Reset</button>
+          </div>
         </div>
         <div class="main-left-sort">
             <h3>Sort By</h3>
@@ -114,6 +106,5 @@
   <script>feather.replace();</script>
   <script src="./database/data.js"></script>
   <script src="./scripts/index.js"></script>
-  <script src="./scripts/addCart.js"></script>
 </body>
 </html>

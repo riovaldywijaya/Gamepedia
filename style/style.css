@@ -86,7 +86,16 @@
     width: 50px;
 }
 
-.main-left-filter, .main-left-sort {
+.reset-btn-container {
+    width: 100%;
+    display: flex;
+}
+
+.reset-btn-container button {
+    width: 100%;
+}
+
+.main-left-sort {
     width: 100%;
     padding: 20px;
     border-radius: 10px;

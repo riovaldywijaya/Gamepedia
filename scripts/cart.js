@@ -1,4 +1,4 @@
-let cartGames = JSON.parse(localStorage.getItem('cart'));
+let cartGames = JSON.parse(localStorage.getItem('cart')) || [];
 
 // RENDER CARD BERDASARKAN DATA
 function renderCart(array) {
@@ -129,6 +129,7 @@ let a = (document.querySelector(".modal-footer .btn").onclick = () => {
 	containerModal.style.display = "none";
 
 	cartGames = [];
+    localStorage.setItem('cart', JSON.stringify(cartGames));
 	renderCart(cartGames);
 });
 
